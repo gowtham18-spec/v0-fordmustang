@@ -137,7 +137,7 @@ export function ContactSection() {
 
               <button
                 type="submit"
-                className="w-full py-4 bg-gold text-background font-medium tracking-widest uppercase hover:bg-gold-dark transition-colors flex items-center justify-center gap-2 group rounded"
+                className="w-full py-4 bg-gold text-background font-medium tracking-widest uppercase hover:bg-gold-dark transition-colors flex items-center justify-center gap-2 group rounded shadow-depth-lg elevation-2"
               >
                 Send Inquiry
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -151,7 +151,7 @@ export function ContactSection() {
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"
             }`}
           >
-            <div className="p-8 bg-card/50 border border-border rounded-lg">
+            <div className="p-8 bg-card/50 border border-border rounded-lg shadow-depth-lg">
               <h3 className="font-serif text-2xl text-foreground mb-6">Contact Information</h3>
 
               <div className="space-y-6">

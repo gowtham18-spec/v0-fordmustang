@@ -109,7 +109,7 @@ export function DesignSection() {
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"
             }`}
           >
-            <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
+            <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-depth-xl">
               <Image
                 src="/images/mustang-interior.jpg"
                 alt="1969 Ford Mustang Interior"
@@ -155,7 +155,7 @@ export function DesignSection() {
                 style={{ transitionDelay: `${500 + index * 150}ms` }}
               >
                 <div className="flex items-start gap-6">
-                  <div className="shrink-0 w-12 h-12 flex items-center justify-center border border-gold/50 rounded">
+                  <div className="shrink-0 w-12 h-12 flex items-center justify-center border border-gold/50 rounded shadow-depth-sm">
                     <span className="text-gold font-serif text-xl">
                       {String(index + 1).padStart(2, "0")}
                     </span>

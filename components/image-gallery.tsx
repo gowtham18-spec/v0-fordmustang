@@ -158,7 +158,7 @@ export function ImageGallery() {
         >
           {/* Main image container */}
           <div
-            className="relative aspect-video max-w-5xl mx-auto rounded-lg overflow-hidden cursor-grab active:cursor-grabbing"
+            className="relative aspect-video max-w-5xl mx-auto rounded-lg overflow-hidden cursor-grab active:cursor-grabbing shadow-depth-lg"
             onMouseDown={handleDragStart}
             onMouseMove={handleDragMove}
             onMouseUp={handleDragEnd}
@@ -191,7 +191,7 @@ export function ImageGallery() {
 
             {/* Hover zoom indicator */}
             <button
-              className="absolute top-4 right-4 p-3 bg-background/50 backdrop-blur-sm rounded-full text-foreground hover:bg-gold hover:text-background transition-all duration-300"
+              className="absolute top-4 right-4 p-3 bg-background/50 backdrop-blur-sm rounded-full text-foreground hover:bg-gold hover:text-background transition-all duration-300 shadow-depth-md elevation-1"
               onClick={() => setIsFullscreen(true)}
               aria-label="View fullscreen"
             >
@@ -200,14 +200,14 @@ export function ImageGallery() {
 
             {/* Navigation arrows */}
             <button
-              className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-background/50 backdrop-blur-sm rounded-full text-foreground hover:bg-gold hover:text-background transition-all duration-300"
+              className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-background/50 backdrop-blur-sm rounded-full text-foreground hover:bg-gold hover:text-background transition-all duration-300 shadow-depth-md elevation-1"
               onClick={goToPrev}
               aria-label="Previous image"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
-              className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-background/50 backdrop-blur-sm rounded-full text-foreground hover:bg-gold hover:text-background transition-all duration-300"
+              className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-background/50 backdrop-blur-sm rounded-full text-foreground hover:bg-gold hover:text-background transition-all duration-300 shadow-depth-md elevation-1"
               onClick={goToNext}
               aria-label="Next image"
             >

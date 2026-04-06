@@ -50,7 +50,7 @@ export function Navigation() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-background/90 backdrop-blur-md border-b border-border py-4"
+            ? "bg-background/95 backdrop-blur-md border-b border-border py-4 shadow-depth-md"
             : "bg-transparent py-6"
         }`}
       >
@@ -90,7 +90,7 @@ export function Navigation() {
           </div>
 
           {/* CTA Button */}
-          <button className="hidden md:block px-6 py-2 border border-gold/50 text-gold hover:bg-gold hover:text-background transition-all duration-300 tracking-widest uppercase text-xs">
+          <button className="hidden md:block px-6 py-2 border border-gold/50 text-gold hover:bg-gold hover:text-background transition-all duration-300 tracking-widest uppercase text-xs shadow-depth-sm elevation-1">
             Reserve
           </button>
 

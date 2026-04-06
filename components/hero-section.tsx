@@ -46,8 +46,8 @@ export function HeroSection() {
       ref={containerRef}
       className="relative h-screen w-full overflow-hidden flex items-center justify-center"
     >
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background z-10" />
+      {/* Gradient overlay with depth */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background z-10 shadow-depth-xl" />
 
       {/* Radial spotlight effect */}
       <div
@@ -111,7 +111,7 @@ export function HeroSection() {
           className={`font-serif text-5xl md:text-7xl lg:text-9xl font-bold text-foreground mb-6 transition-all duration-1000 delay-500 ${
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
-          style={{ textShadow: "0 0 60px rgba(212, 175, 55, 0.3)" }}
+          style={{ textShadow: "0 0 60px rgba(212, 175, 55, 0.4), 0 8px 20px rgba(0, 0, 0, 0.5), 0 4px 10px rgba(0, 0, 0, 0.3)" }}
         >
           <span className="text-balance">1969 Mustang</span>
         </h1>
@@ -130,7 +130,7 @@ export function HeroSection() {
           }`}
         >
           <button
-            className="px-8 py-4 border border-gold/50 text-gold hover:bg-gold hover:text-background transition-all duration-300 tracking-widest uppercase text-sm animate-pulse-glow"
+            className="px-8 py-4 border border-gold/50 text-gold hover:bg-gold hover:text-background transition-all duration-300 tracking-widest uppercase text-sm animate-pulse-glow shadow-depth-md elevation-1"
             onClick={() => {
               document.getElementById("performance")?.scrollIntoView({ behavior: "smooth" })
             }}

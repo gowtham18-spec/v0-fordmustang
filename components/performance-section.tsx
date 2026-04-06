@@ -49,7 +49,7 @@ function StatCard({ icon, value, unit, label, delay, isVisible }: StatCardProps)
 
   return (
     <div
-      className={`group relative p-8 rounded-lg bg-card/50 backdrop-blur-sm border border-border hover:border-gold/50 transition-all duration-500 hover:scale-105 ${
+      className={`group relative p-8 rounded-lg bg-card/50 backdrop-blur-sm border border-border hover:border-gold/50 transition-all duration-500 hover:scale-105 shadow-depth-md ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
       }`}
       style={{ transitionDelay: `${delay}ms` }}

@@ -4,10 +4,8 @@ import { useRef, useState, useEffect, Suspense } from "react"
 import { Canvas, useFrame, useThree } from "@react-three/fiber"
 import { 
   Environment, 
-  Html, 
   useTexture, 
   PerspectiveCamera,
-  MeshReflectorMaterial,
   Float
 } from "@react-three/drei"
 import * as THREE from "three"
@@ -181,20 +179,13 @@ function CarImage() {
 
 function ReflectiveFloor() {
   return (
-    <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.9, 0]}>
+    <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.9, 0]} receiveShadow>
       <planeGeometry args={[20, 20]} />
-      <MeshReflectorMaterial
-        blur={[300, 100]}
-        resolution={1024}
-        mixBlur={1}
-        mixStrength={40}
-        roughness={1}
-        depthScale={1.2}
-        minDepthThreshold={0.4}
-        maxDepthThreshold={1.4}
-        color="#050505"
-        metalness={0.5}
-        mirror={0.5}
+      <meshStandardMaterial
+        color="#080808"
+        metalness={0.9}
+        roughness={0.1}
+        envMapIntensity={0.5}
       />
     </mesh>
   )
